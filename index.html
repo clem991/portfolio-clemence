@@ -15,50 +15,50 @@
       --font-heading: 'Playfair Display', serif;
       --font-body: 'Open Sans', sans-serif;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height:1.6; overflow-x:hidden; }
-    header { position:fixed; top:0; left:0; right:0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; z-index:100; border-bottom:1px solid #eaeaea; }
-    .logo { font-family: var(--font-heading); font-size:1.6rem; color: var(--accent); text-decoration:none; }
-    nav ul { display:flex; gap:1.5rem; list-style:none; }
-    nav a { text-decoration:none; color: var(--text); font-weight:600; font-size:0.9rem; position:relative; padding:0.2rem 0; transition: color var(--transition); }
-    nav a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background: var(--accent); transition: width var(--transition); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; }
+    header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 100; border-bottom: 1px solid #eaeaea; }
+    .logo { font-family: var(--font-heading); font-size: 1.6rem; color: var(--accent); text-decoration: none; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; position: relative; padding: 0.2rem 0; transition: color var(--transition); }
+    nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--transition); }
     nav a:hover { color: var(--accent); }
-    nav a:hover::after { width:100%; }
-    main { padding-top:80px; }
-    /* Hero */
-    .hero { position:relative; height:50vh; background: url('assets/hero.jpg') center/cover no-repeat; }
-    .hero::after { content:''; position:absolute; inset:0; background: rgba(0,0,0,0.2); }
-    .hero-content { position:absolute; bottom:2rem; left:2rem; color:#fff; max-width:60%; animation: fadeIn 1s ease-out; }
-    .hero-content h1 { font-family: var(--font-heading); font-size:2.8rem; margin-bottom:0.5rem; }
-    .hero-content p { font-size:1rem; }
-    @keyframes fadeIn { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
-    section { padding:4rem 2rem; max-width:1200px; margin:auto; }
-    section h2 { font-family:var(--font-heading); font-size:2.4rem; text-align:center; margin-bottom:1.5rem; }
+    nav a:hover::after { width: 100%; }
+    main { padding-top: 80px; }
+    /* Hero replaced with video */
+    .hero { position: relative; width: 100%; height: 60vh; overflow: hidden; }
+    .hero video { position: absolute; top: 50%; left: 50%; width: 100%; height: auto; min-height: 100%; min-width: 100%; transform: translate(-50%, -50%); object-fit: cover; }
+    .hero-content { position: absolute; bottom: 2rem; left: 2rem; color: #fff; z-index: 1; animation: fadeIn 1s ease-out; }
+    .hero-content h1 { font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 0.5rem; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
+    .hero-content p { font-size: 1rem; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+    section h2 { font-family: var(--font-heading); font-size: 2.4rem; text-align: center; margin-bottom: 1.5rem; }
     /* Details bio */
-    details { max-width:800px; margin:auto; font-size:1rem; }
-    details summary { cursor:pointer; font-weight:600; padding:0.5rem; background:rgba(0,0,0,0.05); border-radius:4px; }
-    details p, details a { margin:1rem 0; display:block; }
+    details { max-width: 800px; margin: auto; font-size: 1rem; }
+    details summary { cursor: pointer; font-weight: 600; padding: 0.5rem; background: rgba(0,0,0,0.05); border-radius: 4px; }
+    details p, details a { margin: 1rem 0; display: block; }
     /* Soft Skills */
-    #soft-skills ul { list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
-    #soft-skills li { background:rgba(0,0,0,0.05); padding:1rem; border-radius:4px; text-align:center; }
+    #soft-skills ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    #soft-skills li { background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 4px; text-align: center; }
     /* Interactive cards */
-    .interactive-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; }
-    .interactive-card { position:relative; height:250px; overflow:hidden; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: transform var(--transition), filter var(--transition); }
-    .interactive-card:hover { transform:translateY(-5px); }
-    .interactive-card .card-bg { width:100%; height:100%; background-size:cover; background-position:center; }
+    .interactive-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    .interactive-card { position: relative; height: 250px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform var(--transition), filter var(--transition); }
+    .interactive-card:hover { transform: translateY(-5px); }
+    .interactive-card .card-bg { width: 100%; height: 100%; background-size: cover; background-position: center; }
     .interactive-card:hover .card-bg { filter: brightness(0.7); }
-    .interactive-card a { position:absolute; inset:0; display:block; }
-    .interactive-card .card-title { position:absolute; bottom:1rem; left:1rem; color:#fff; font-family:var(--font-heading); font-size:1.5rem; text-shadow:0 2px 4px rgba(0,0,0,0.5); z-index:1; }
+    .interactive-card a { position: absolute; inset: 0; display: block; }
+    .interactive-card .card-title { position: absolute; bottom: 1rem; left: 1rem; color: #fff; font-family: var(--font-heading); font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); z-index: 1; }
     /* CSS Modals via :target */
-    .modal { position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; padding:2rem; z-index:200; }
-    .modal:target { display:flex; }
-    .modal-content { background:#fff; padding:2rem; max-width:800px; max-height:90%; overflow-y:auto; border-radius:8px; position:relative; }
-    .modal-close { position:absolute; top:1rem; right:1rem; text-decoration:none; font-size:1.5rem; color:#333; }
+    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; padding: 2rem; z-index: 200; }
+    .modal:target { display: flex; }
+    .modal-content { background: #fff; padding: 2rem; max-width: 800px; max-height: 90%; overflow-y: auto; border-radius: 8px; position: relative; }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; text-decoration: none; font-size: 1.5rem; color: #333; }
     /* Contact */
-    #contact p { text-align:center; margin:0.5rem 0; }
-    #contact a { color:var(--accent); font-weight:600; text-decoration:none; transition:opacity var(--transition); }
-    #contact a:hover { opacity:0.7; }
-    footer { text-align:center; padding:2rem; font-size:0.85rem; color:#888; border-top:1px solid #eaeaea; }
+    #contact p { text-align: center; margin: 0.5rem 0; }
+    #contact a { color: var(--accent); font-weight: 600; text-decoration: none; transition: opacity var(--transition); }
+    #contact a:hover { opacity: 0.7; }
+    footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #888; border-top: 1px solid #eaeaea; }
   </style>
 </head>
 <body>
@@ -78,8 +78,9 @@
   </header>
   <main>
     <section id="home" class="hero">
+      <video src="intro.mp4" autoplay muted loop playsinline></video>
       <div class="hero-content">
-        <h1>Je suis Clémence Rance</n        ></h1>
+        <h1>Je suis Clémence Rance</h1>
         <p>Artiste Visuelle & Créatrice</p>
       </div>
     </section>
@@ -89,7 +90,7 @@
         <summary>Voir ma bio</summary>
         <p><strong>Mini Biographie :</strong> [Ton texte ici]</p>
         <p><strong>Parcours :</strong> [Ton parcours détaillé sans élément radioactif]</p>
-        <p><a href="cv.pdf" target="_blank">Télécharger mon CV</a></p>
+        <p><a href="assets/cv.pdf" target="_blank">Télécharger mon CV</a></p>
         <p><strong>Pourquoi BTS Communication ?</strong> [Ton explication]</p>
       </details>
     </section>
@@ -118,6 +119,24 @@
       <div class="interactive-list">
         <div class="interactive-card">
           <div class="card-bg" style="background-image:url('imgs/1.png')"></div>
+          <a href="#modal2"></a>
+          <div class="card-title">Projet Entreprise 1</div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="interactive-list">
+        <div class="interactive-card">
+          <div class="card-bg" style="background-image:url('imgs/2.png')"></div>
+          <a href="#modal2"></a>
+          <div class="card-title">Projet Entreprise 1</div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="interactive-list">
+        <div class="interactive-card">
+          <div class="card-bg" style="background-image:url('imgs/3.png')"></div>
           <a href="#modal2"></a>
           <div class="card-title">Projet Entreprise 1</div>
         </div>
