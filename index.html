@@ -26,7 +26,7 @@
     nav a:hover::after { width: 100%; }
     main { padding-top: 80px; }
     /* Hero replaced with video */
-    .hero { position: relative; width: 100%; height: 60vh; overflow: hidden; }
+    .hero { position: relative; width: 100%; height: 90vh; overflow: hidden; }
     .hero video { position: absolute; top: 50%; left: 50%; width: 100%; height: auto; min-height: 100%; min-width: 100%; transform: translate(-50%, -50%); object-fit: cover; }
     .hero-content { position: absolute; bottom: 2rem; left: 2rem; color: #fff; z-index: 1; animation: fadeIn 1s ease-out; }
     .hero-content h1 { font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 0.5rem; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
@@ -81,7 +81,9 @@
       <video src="intro.mp4" autoplay muted loop playsinline></video>
       <div class="hero-content">
         <h1>Je suis Clémence Rance</h1>
-        <p>Artiste Visuelle & Créatrice</p>
+        <p>Communicante
+
+        </p>
       </div>
     </section>
     <section id="about">
@@ -90,25 +92,29 @@
         <summary>Voir ma bio</summary>
         <p><strong>Mini Biographie :</strong> [Ton texte ici]</p>
         <p><strong>Parcours :</strong> [Ton parcours détaillé sans élément radioactif]</p>
-        <p><a href="assets/cv.pdf" target="_blank">Télécharger mon CV</a></p>
+        <p><a href="cv.pdf" target="_blank">Télécharger mon CV</a></p>
         <p><strong>Pourquoi BTS Communication ?</strong> [Ton explication]</p>
       </details>
     </section>
     <section id="soft-skills">
       <h2>Mes Soft Skills</h2>
       <ul>
-        <li>Communication</li>
-        <li>Créativité</li>
-        <li>Esprit d'équipe</li>
-        <li>Gestion du temps</li>
-        <li>Adaptabilité</li>
+        <li>Photoshop</li> 
+        <li>illustrator</li>
+        <li>idesign</li>
+        <li>capcut</li>
+        <li>canva</li>
+        <li>chatgpt</li>
+        <li>canva</li>
+        <li>teams</Ii>
+          
       </ul>
     </section>
     <section id="big-projects">
       <h2>Mes plus grosses œuvres</h2>
       <div class="interactive-list">
         <div class="interactive-card">
-          <div class="card-bg" style="background-image:url('assets/projet-principal1.jpg')"></div>
+          <div class="card-bg" style="background-image:url('/MOI.svg')"></div>
           <a href="#modal1"></a>
           <div class="card-title">Projet Principal 1</div>
         </div>
@@ -146,10 +152,59 @@
       <h2>Œuvres scolaires</h2>
       <div class="interactive-list">
         <div class="interactive-card">
-          <div class="card-bg" style="background-image:url('assets/scolaire1.jpg')"></div>
+          <div class="card-bg" style="background-image:url('imgs/8.png')"></div>
           <a href="#modal3"></a>
           <div class="card-title">Projet Scolaire 1</div>
+        </div><!-- +++ DÉBUT : Modale pour projet scolaire (plusieurs images + textes) +++ -->
+        <div id="modal4" class="modal">
+          <div class="modal-content">
+            <!-- Bouton fermer → retourne à la section -->
+            <a href="#school-works" class="modal-close">&times;</a>
+        
+            <h3>Titre de mon projet scolaire</h3>
+        
+            <!-- Galerie d’images -->
+            <div class="modal-gallery" style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+              <!-- Pour chaque image, duplique ce <figure> et remplace src + alt -->
+              <figure style="flex: 1 1 45%; margin: 0;">
+                <img 
+                  src="imgs/projet-scolaire-vue1.jpg" 
+                  alt="Vue 1 du projet scolaire" 
+                  style="width:100%; border-radius:4px;"
+                />
+                <figcaption style="font-size:0.9rem; text-align:center; margin-top:0.5rem;">
+                  Légende ou description courte de l’image 1
+                </figcaption>
+              </figure>
+        
+              <figure style="flex: 1 1 45%; margin: 0;">
+                <img 
+                  src="imgs/projet-scolaire-vue2.jpg" 
+                  alt="Vue 2 du projet scolaire" 
+                  style="width:100%; border-radius:4px;"
+                />
+                <figcaption style="font-size:0.9rem; text-align:center; margin-top:0.5rem;">
+                  Légende ou description courte de l’image 2
+                </figcaption>
+              </figure>
+              <!-- → duplique autant de figures que nécessaire -->
+            </div>
+        
+            <!-- Texte descriptif -->
+            <div class="modal-text" style="font-size:1rem; line-height:1.5; margin-top:1rem;">
+              <p><strong>Date :</strong> Mars 2024</p>
+              <p><strong>Contexte :</strong> Alternance chez Doudou & Compagnie, campagne scolaire.</p>
+              <p><strong>Démarche :</strong> J’ai réalisé une veille créative, conçu la scénographie,
+                 tourné les vidéos et assuré le montage sous Premiere & CapCut.</p>
+              <p><strong>Outils :</strong> Photoshop, Illustrator, Premiere, CapCut, Teams.</p>
+              <p><strong>Résultats :</strong> +20 % d’engagement sur Instagram, retour très positif
+                 de la tutrice.</p>
+              <!-- Ajoute ou enlève des <p> selon tes besoins -->
+            </div>
+          </div>
         </div>
+        <!-- +++ FIN : Modale pour projet scolaire +++ -->
+        
       </div>
     </section>
     <!-- Modals CSS -->
@@ -164,14 +219,14 @@
       <div class="modal-content">
         <a href="#enterprise-works" class="modal-close">&times;</a>
         <h3>Projet Entreprise 1</h3>
-        <p>[Contenu interactif pour le projet entreprise]</p>
+        <p>[Contenu radioactif pour le projet entreprise]</p>
       </div>
     </div>
     <div id="modal3" class="modal">
       <div class="modal-content">
         <a href="#school-works" class="modal-close">&times;</a>
         <h3>Projet Scolaire 1</h3>
-        <p>[Contenu interactif pour le projet scolaire]</p>
+        <p>[Contenu RADIOACTIF pour le projet scolaire]</p>
       </div>
     </div>
     <section id="contact">
