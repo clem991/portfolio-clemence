@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Clémence Rance</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;600&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --bg: #fff;
@@ -15,52 +18,299 @@
       --font-heading: 'Playfair Display', serif;
       --font-body: 'Open Sans', sans-serif;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; }
-    header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; z-index: 100; border-bottom: 1px solid #eaeaea; }
-    .logo { font-family: var(--font-heading); font-size: 1.6rem; color: var(--accent); text-decoration: none; }
-    nav ul { display: flex; gap: 1.5rem; list-style: none; }
-    nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; position: relative; padding: 0.2rem 0; transition: color var(--transition); }
-    nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--transition); }
-    nav a:hover { color: var(--accent); }
-    nav a:hover::after { width: 100%; }
-    main { padding-top: 80px; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+      position: relative;
+      padding: 0.2rem 0;
+      transition: color var(--transition);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      padding-top: 80px;
+    }
+
     /* Hero replaced with video */
-    .hero { position: relative; width: 100%; height: 90vh; overflow: hidden; }
-    .hero video { position: absolute; top: 50%; left: 50%; width: 100%; height: auto; min-height: 100%; min-width: 100%; transform: translate(-50%, -50%); object-fit: cover; }
-    .hero-content { position: absolute; bottom: 2rem; left: 2rem; color: #fff; z-index: 1; animation: fadeIn 1s ease-out; }
-    .hero-content h1 { font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 0.5rem; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
-    .hero-content p { font-size: 1rem; text-shadow: 0 2px 6px rgba(0,0,0,0.7); }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
-    section h2 { font-family: var(--font-heading); font-size: 2.4rem; text-align: center; margin-bottom: 1.5rem; }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: #fff;
+      z-index: 1;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
     /* Details bio */
-    details { max-width: 800px; margin: auto; font-size: 1rem; }
-    details summary { cursor: pointer; font-weight: 600; padding: 0.5rem; background: rgba(0,0,0,0.05); border-radius: 4px; }
-    details p, details a { margin: 1rem 0; display: block; }
+    details {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 0.5rem;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+
+    details p,
+    details a {
+      margin: 1rem 0;
+      display: block;
+    }
+
     /* Soft Skills */
-    #soft-skills ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-    #soft-skills li { background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 4px; text-align: center; }
+    #soft-skills ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    #soft-skills li {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+
     /* Interactive cards */
-    .interactive-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .interactive-card { position: relative; height: 250px; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform var(--transition), filter var(--transition); }
-    .interactive-card:hover { transform: translateY(-5px); }
-    .interactive-card .card-bg { width: 100%; height: 100%; background-size: cover; background-position: center; }
-    .interactive-card:hover .card-bg { filter: brightness(0.7); }
-    .interactive-card a { position: absolute; inset: 0; display: block; }
-    .interactive-card .card-title { position: absolute; bottom: 1rem; left: 1rem; color: #fff; font-family: var(--font-heading); font-size: 1.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); z-index: 1; }
+    .interactive-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .interactive-card {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform var(--transition), filter var(--transition);
+    }
+
+    .interactive-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .interactive-card .card-bg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .interactive-card:hover .card-bg {
+      filter: brightness(0.7);
+    }
+
+    .interactive-card a {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+
+    .interactive-card .card-title {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
     /* CSS Modals via :target */
-    .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center; padding: 2rem; z-index: 200; }
-    .modal:target { display: flex; }
-    .modal-content { background: #fff; padding: 2rem; max-width: 800px; max-height: 90%; overflow-y: auto; border-radius: 8px; position: relative; }
-    .modal-close { position: absolute; top: 1rem; right: 1rem; text-decoration: none; font-size: 1.5rem; color: #333; }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 200;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      max-width: 800px;
+      max-height: 90%;
+      overflow-y: auto;
+      border-radius: 8px;
+      position: relative;
+      display:grid;
+      justify-content: center;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
     /* Contact */
-    #contact p { text-align: center; margin: 0.5rem 0; }
-    #contact a { color: var(--accent); font-weight: 600; text-decoration: none; transition: opacity var(--transition); }
-    #contact a:hover { opacity: 0.7; }
-    footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #888; border-top: 1px solid #eaeaea; }
+    #contact p {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+
+    #contact a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity var(--transition);
+    }
+
+    #contact a:hover {
+      opacity: 0.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #888;
+      border-top: 1px solid #eaeaea;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <a href="#home" class="logo">Clémence Rance</a>
@@ -90,7 +340,9 @@
       <h2>À propos de moi</h2>
       <details>
         <summary>Voir ma bio</summary>
-        <p><strong>Mini Biographie :</strong> [Je suis Clémence Rance,jeune adulte de 23 ans, passionnée par la communication visuelle et l’univers artistique. Curieuse, j’aime explorer les tendances et créer des contenus engageants]</p>
+        <p><strong>Mini Biographie :</strong> [Je suis Clémence Rance,jeune adulte de 23 ans, passionnée par la
+          communication visuelle et l’univers artistique. Curieuse, j’aime explorer les tendances et créer des contenus
+          engageants]</p>
         <p><strong>Parcours :</strong> [Ton parcours détaillé sans élément radioactif]</p>
         <p><a href="cv.pdf" target="_blank">Télécharger mon CV</a></p>
         <p><strong>Pourquoi BTS Communication ?</strong> [Ton explication]</p>
@@ -99,7 +351,7 @@
     <section id="soft-skills">
       <h2>Mes Soft Skills</h2>
       <ul>
-        <li>Photoshop</li> 
+        <li>Photoshop</li>
         <li>illustrator</li>
         <li>idesign</li>
         <li>capcut</li>
@@ -107,7 +359,7 @@
         <li>chatgpt</li>
         <li>canva</li>
         <li>teams</Ii>
-          
+
       </ul>
     </section>
     <section id="big-projects">
@@ -140,7 +392,7 @@
       </div>
       <br />
       <br />
-      <div class="interactive-list">
+      <div class="interactive-list">SCREEN STORY MASCOTTE 2.jpg
         <div class="interactive-card">
           <div class="card-bg" style="background-image:url('imgs/3.png')"></div>
           <a href="#modal2"></a>
@@ -160,51 +412,45 @@
           <div class="modal-content">
             <!-- Bouton fermer → retourne à la section -->
             <a href="#school-works" class="modal-close">&times;</a>
-        
+
             <h3>Titre de mon projet scolaire</h3>
-        
+
             <!-- Galerie d’images -->
             <div class="modal-gallery" style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
               <!-- Pour chaque image, duplique ce <figure> et remplace src + alt -->
               <figure style="flex: 1 1 45%; margin: 0;">
-                <img 
-                  src="imgs/projet-scolaire-vue1.jpg" 
-                  alt="Vue 1 du projet scolaire" 
-                  style="width:100%; border-radius:4px;"
-                />
+                <img src="imgs/projet-scolaire-vue1.jpg" alt="Vue 1 du projet scolaire"
+                  style="width:100%; border-radius:4px;" />
                 <figcaption style="font-size:0.9rem; text-align:center; margin-top:0.5rem;">
                   Légende ou description courte de l’image 1
                 </figcaption>
               </figure>
-        
+
               <figure style="flex: 1 1 45%; margin: 0;">
-                <img 
-                  src="imgs/projet-scolaire-vue2.jpg" 
-                  alt="Vue 2 du projet scolaire" 
-                  style="width:100%; border-radius:4px;"
-                />
+                <img src="imgs/projet-scolaire-vue2.jpg" alt="Vue 2 du projet scolaire"
+                  style="width:100%; border-radius:4px;" />
                 <figcaption style="font-size:0.9rem; text-align:center; margin-top:0.5rem;">
                   Légende ou description courte de l’image 2
                 </figcaption>
               </figure>
               <!-- → duplique autant de figures que nécessaire -->
             </div>
-        
+
             <!-- Texte descriptif -->
             <div class="modal-text" style="font-size:1rem; line-height:1.5; margin-top:1rem;">
               <p><strong>Date :</strong> Mars 2024</p>
               <p><strong>Contexte :</strong> Alternance chez Doudou & Compagnie, campagne scolaire.</p>
               <p><strong>Démarche :</strong> J’ai réalisé une veille créative, conçu la scénographie,
-                 tourné les vidéos et assuré le montage sous Premiere & CapCut.</p>
+                tourné les vidéos et assuré le montage sous Premiere & CapCut.</p>
               <p><strong>Outils :</strong> Photoshop, Illustrator, Premiere, CapCut, Teams.</p>
               <p><strong>Résultats :</strong> +20 % d’engagement sur Instagram, retour très positif
-                 de la tutrice.</p>
+                de la tutrice.</p>
               <!-- Ajoute ou enlève des <p> selon tes besoins -->
             </div>
           </div>
         </div>
         <!-- +++ FIN : Modale pour projet scolaire +++ -->
-        
+
       </div>
     </section>
     <!-- Modals CSS -->
@@ -219,6 +465,7 @@
       <div class="modal-content">
         <a href="#enterprise-works" class="modal-close">&times;</a>
         <h3>Projet Entreprise 1</h3>
+           <img src="imgs/14.png" alt="Vue 1 du projet scolaire" style="width:70%; border-radius:4px;  margin:auto; margin-top:20px" />
         <p>[Contenu radioactif DE OUF pour le projet entreprise]</p>
       </div>
     </div>
@@ -226,6 +473,7 @@
       <div class="modal-content">
         <a href="#school-works" class="modal-close">&times;</a>
         <h3>Projet Scolaire 1</h3>
+        <img src="imgs/14.png" alt="Vue 1 du projet scolaire" style="width:70%; border-radius:4px;  margin:auto; margin-top:20px" />
         <p>[Contenu RADIOACTIF ssss pour le projet scolaire]</p>
       </div>
     </div>
@@ -237,4 +485,5 @@
   </main>
   <footer>&copy; 2025 Clémence Rance</footer>
 </body>
+
 </html>
